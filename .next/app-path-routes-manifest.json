@@ -1,0 +1,12 @@
+{
+  "/(auth)/login/page": "/login",
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/admin/dashboard/page": "/admin/dashboard",
+  "/admin/field-executives/[id]/page": "/admin/field-executives/[id]",
+  "/admin/field-executives/page": "/admin/field-executives",
+  "/farmer/dashboard/page": "/farmer/dashboard",
+  "/favicon.ico/route": "/favicon.ico",
+  "/mco/dashboard/page": "/mco/dashboard",
+  "/page": "/"
+}
