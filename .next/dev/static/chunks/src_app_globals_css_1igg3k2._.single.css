@@ -98,8 +98,6 @@
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
-    --text-3xl: 1.875rem;
-    --text-3xl--line-height: calc(2.25 / 1.875);
     --font-weight-normal: 400;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
@@ -466,6 +464,10 @@
     top: calc(var(--spacing) * 3);
   }
 
+  .-right-40 {
+    right: calc(var(--spacing) * -40);
+  }
+
   .right-0 {
     right: 0;
   }
@@ -564,6 +566,10 @@
 
   .mt-6 {
     margin-top: calc(var(--spacing) * 6);
+  }
+
+  .mt-10 {
+    margin-top: calc(var(--spacing) * 10);
   }
 
   .mt-auto {
@@ -784,8 +790,16 @@
     height: 17px;
   }
 
+  .h-\[560px\] {
+    height: 560px;
+  }
+
   .h-\[calc\(100\%-1px\)\] {
     height: calc(100% - 1px);
+  }
+
+  .h-auto {
+    height: auto;
   }
 
   .h-dvh {
@@ -900,6 +914,10 @@
     width: 72px;
   }
 
+  .w-\[560px\] {
+    width: 560px;
+  }
+
   .w-fit {
     width: fit-content;
   }
@@ -918,6 +936,10 @@
 
   .max-w-\[220px\] {
     max-width: 220px;
+  }
+
+  .max-w-\[420px\] {
+    max-width: 420px;
   }
 
   .max-w-\[calc\(100\%-2rem\)\] {
@@ -1177,10 +1199,10 @@
     margin-block-end: calc(calc(var(--spacing) * 6) * calc(1 - var(--tw-space-y-reverse)));
   }
 
-  :where(.space-y-10 > :not(:last-child)) {
+  :where(.space-y-8 > :not(:last-child)) {
     --tw-space-y-reverse: 0;
-    margin-block-start: calc(calc(var(--spacing) * 10) * var(--tw-space-y-reverse));
-    margin-block-end: calc(calc(var(--spacing) * 10) * calc(1 - var(--tw-space-y-reverse)));
+    margin-block-start: calc(calc(var(--spacing) * 8) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 8) * calc(1 - var(--tw-space-y-reverse)));
   }
 
   .gap-x-3 {
@@ -1376,6 +1398,16 @@
 
   .border-input {
     border-color: var(--input);
+  }
+
+  .border-primary-foreground\/10 {
+    border-color: var(--primary-foreground);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .border-primary-foreground\/10 {
+      border-color: color-mix(in oklab, var(--primary-foreground) 10%, transparent);
+    }
   }
 
   .border-sidebar-border {
@@ -1674,6 +1706,10 @@
     padding-block: var(--card-spacing);
   }
 
+  .py-0 {
+    padding-block: 0;
+  }
+
   .py-0\.5 {
     padding-block: calc(var(--spacing) * .5);
   }
@@ -1704,6 +1740,10 @@
 
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
+  }
+
+  .py-6 {
+    padding-block: calc(var(--spacing) * 6);
   }
 
   .py-8 {
@@ -1797,11 +1837,6 @@
   .text-2xl {
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
-  }
-
-  .text-3xl {
-    font-size: var(--text-3xl);
-    line-height: var(--tw-leading, var(--text-3xl--line-height));
   }
 
   .text-base {
@@ -1991,6 +2026,16 @@
     color: var(--primary-foreground);
   }
 
+  .text-primary-foreground\/45 {
+    color: var(--primary-foreground);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .text-primary-foreground\/45 {
+      color: color-mix(in oklab, var(--primary-foreground) 45%, transparent);
+    }
+  }
+
   .text-primary-foreground\/60 {
     color: var(--primary-foreground);
   }
@@ -2008,16 +2053,6 @@
   @supports (color: color-mix(in lab, red, red)) {
     .text-primary-foreground\/70 {
       color: color-mix(in oklab, var(--primary-foreground) 70%, transparent);
-    }
-  }
-
-  .text-primary-foreground\/75 {
-    color: var(--primary-foreground);
-  }
-
-  @supports (color: color-mix(in lab, red, red)) {
-    .text-primary-foreground\/75 {
-      color: color-mix(in oklab, var(--primary-foreground) 75%, transparent);
     }
   }
 
@@ -2125,12 +2160,16 @@
     opacity: 0;
   }
 
+  .opacity-40 {
+    opacity: .4;
+  }
+
   .opacity-50 {
     opacity: .5;
   }
 
-  .opacity-\[0\.07\] {
-    opacity: .07;
+  .opacity-\[0\.06\] {
+    opacity: .06;
   }
 
   .bg-blend-color {
@@ -3269,6 +3308,10 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+    .sm\:grid-cols-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
     .sm\:flex-row {
       flex-direction: row;
     }
@@ -3283,6 +3326,10 @@
 
     .sm\:justify-end {
       justify-content: flex-end;
+    }
+
+    .sm\:gap-3 {
+      gap: calc(var(--spacing) * 3);
     }
 
     .sm\:p-8 {
@@ -3356,6 +3403,12 @@
 
     .lg\:grid-cols-4 {
       grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .xl\:px-16 {
+      padding-inline: calc(var(--spacing) * 16);
     }
   }
 
